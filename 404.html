@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="icon" type="image/jpg" href="images/profile-avatar.jpg">
+    <title>404 - Page Not Found</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .error-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            padding: 2rem;
+        }
+        
+        .error-code {
+            font-size: 10rem;
+            font-weight: 800;
+            margin: 0;
+            background: linear-gradient(90deg, #00ffa3, #03e1ff, #dc1fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 20px rgba(0, 255, 163, 0.5);
+            animation: glitch 3s infinite;
+        }
+        
+        .error-message {
+            font-size: 2rem;
+            margin: 1rem 0 2rem;
+        }
+        
+        .error-description {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+            opacity: 0.8;
+        }
+        
+        .ufo-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin-bottom: 2rem;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            background: linear-gradient(90deg, #00ffa3, #03e1ff);
+            border: none;
+            border-radius: 50px;
+            color: #0a0a0a;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 255, 163, 0.5);
+        }
+        
+        .back-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 30px rgba(0, 255, 163, 0.7);
+        }
+        
+        .back-btn i {
+            margin-right: 0.5rem;
+        }
+        
+        @keyframes glitch {
+            0% {
+                text-shadow: 0 0 20px rgba(0, 255, 163, 0.5);
+            }
+            20% {
+                text-shadow: -5px 0 #dc1fff, 5px 0 #03e1ff;
+            }
+            25% {
+                text-shadow: 0 0 20px rgba(0, 255, 163, 0.5);
+            }
+            50% {
+                text-shadow: 0 0 20px rgba(0, 255, 163, 0.5);
+            }
+            70% {
+                text-shadow: 5px 0 #dc1fff, -5px 0 #03e1ff;
+            }
+            75% {
+                text-shadow: 0 0 20px rgba(0, 255, 163, 0.5);
+            }
+            100% {
+                text-shadow: 0 0 20px rgba(0, 255, 163, 0.5);
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            .error-code {
+                font-size: 6rem;
+            }
+            
+            .error-message {
+                font-size: 1.5rem;
+            }
+            
+            .error-description {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1 class="error-code">404</h1>
+        <h2 class="error-message">Page Not Found</h2>
+        <p class="error-description">Oops! It seems like the page you're looking for has been abducted by aliens or doesn't exist in this dimension.</p>
+        
+        <div class="ufo-container">
+            <div class="ufo">
+                <div class="ufo-core">
+                    <div class="core-ring"></div>
+                    <div class="core-center">
+                        <div class="core-crystal"></div>
+                    </div>
+                </div>
+                <div class="ufo-cabin">
+                    <div class="cabin-glass">
+                        <div class="cabin-interior">
+                            <div class="pilot">
+                                <div class="pilot-head">
+                                    <div class="pilot-eyes"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ufo-body">
+                    <div class="body-lights">
+                        <div class="light"></div>
+                        <div class="light"></div>
+                        <div class="light"></div>
+                        <div class="light"></div>
+                        <div class="light"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-home"></i> Back to Homepage
+        </a>
+    </div>
+
+    <script>
+        document.querySelector('.ufo').addEventListener('click', function() {
+            const ufo = this;
+            
+            // Add crash animation
+            ufo.classList.add('crashing');
+            
+            // After crash animation, hide UFO
+            setTimeout(() => {
+                ufo.classList.add('hidden');
+                ufo.classList.remove('crashing');
+                
+                // Start re-entry animation after a delay
+                setTimeout(() => {
+                    ufo.classList.add('entering');
+                    ufo.classList.remove('hidden');
+                    
+                    // Remove entering class after animation completes
+                    setTimeout(() => {
+                        ufo.classList.remove('entering');
+                    }, 2500);
+                }, 500);
+            }, 1200);
+        });
+    </script>
+</body>
+</html> 
