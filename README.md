@@ -31,6 +31,7 @@ A modern, interactive portfolio website showcasing web development skills and pr
 - `css/` - Stylesheet files
 - `js/` - JavaScript files
 - `images/` - Project images
+- `resume/` - My CV/Resume in PDF format
 
 ## License
 
